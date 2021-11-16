@@ -6,21 +6,50 @@
     #761919
   */
 
-  body {
+body {
   margin: 0;
   padding: 0;
 }
 
 nav {
   background-color: #E7E3AF;
-  border-bottom: 1px solid #CCAB6F;
-  border-top: 1px solid #CCAB6F;
+  height: 80px;
   margin: 0;
-  margin-bottom: 1em;
 }
 
-logo {
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0;
+  padding-top: 10px;
+}
+
+li {
+  margin-right: 20px;
+  padding-top: 16px;
+}
+
+
+.link {
+  text-decoration: none;
+  color: #662F18;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.img {
   float: left;
-  margin-top: 0.5em;
-  margin-left: 1em;
+  width: 160px;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.link:hover {
+  background-color: #761919;
+  color: #E7E3AF;
+  padding: 3px 7px;
+  border-radius: 3px;
+  transition: ease-in-out 0.5s;
 }

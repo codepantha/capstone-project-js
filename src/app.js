@@ -6,14 +6,14 @@ const nav = () => {
   const nav = document.createElement('nav');
   nav.innerHTML = `
     <a href="#" class="logo">
-      <img src='${Logo}' alt="Logo Harry">
+      <img class="img" src='${Logo}' alt="Logo Harry">
     </a>
     <ul>
       <li>
-        <a href="#">Home</a>
+        <a class="link" href="#">About</a>
       </li>
       <li>
-        <a href="#">About</a>
+        <a class="link" href="#">Home</a>
       </li>
     </ul>
   `;
