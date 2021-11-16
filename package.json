@@ -1,0 +1,19 @@
+{
+  "name": "capstone-project",
+  "version": "1.0.0",
+  "description": "It's a project builted with Webpack and ES6.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codepantherr/capstone-project-js.git"
+  },
+  "author": "Carlos & Promise",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codepantherr/capstone-project-js/issues"
+  },
+  "homepage": "https://github.com/codepantherr/capstone-project-js#readme"
+}
