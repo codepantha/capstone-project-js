@@ -63,21 +63,32 @@ li {
   background: rgb(118,25,25);
   background: linear-gradient(360deg, rgba(118, 25, 25, 0.924) 0%, rgb(128, 80, 41)100%);
   z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal {
   background-color: #e7e3af;
   width: 70%;
   margin: auto;
-  padding: 20px;
+  padding: 30px 50px;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
+  border-radius: 8px;
   min-height: 600px;
 }
 
+.modal-close {
+  text-align: left;
+  cursor: pointer;
+}
 
 .btn {
   background-color: #e7e3af;
