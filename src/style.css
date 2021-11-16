@@ -11,6 +11,16 @@ body {
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 nav {
   background-color: #e7e3af;
   height: 80px;
@@ -84,4 +94,25 @@ li {
   padding: 3px 7px;
   border-radius: 3px;
   transition: ease-in-out 0.8s;
+}
+
+.footer {
+  background: #662f18;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 18px;
+}
+
+.footer-link {
+  color: #e6e6e6;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:visited {
+  color: rgb(194, 189, 189);
 }
