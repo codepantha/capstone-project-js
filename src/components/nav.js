@@ -5,7 +5,7 @@ const nav = () => {
   const nav = document.createElement('nav');
   nav.innerHTML = `
     <a href="#" class="logo">
-      <img class="img" src='${Logo}' alt="Logo Harry">
+      <img class="img" src="${Logo}" alt="Logo Harry">
     </a>
     <ul>
       <li>
