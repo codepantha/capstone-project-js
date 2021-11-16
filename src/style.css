@@ -1,4 +1,3 @@
-body {
   /* 
     #E7E3AF
     #CCAB6F
@@ -6,4 +5,22 @@ body {
     #662F18
     #761919
   */
+
+  body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #E7E3AF;
+  border-bottom: 1px solid #CCAB6F;
+  border-top: 1px solid #CCAB6F;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+logo {
+  float: left;
+  margin-top: 0.5em;
+  margin-left: 1em;
 }
