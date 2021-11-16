@@ -1,11 +1,7 @@
 import './style.css';
 import nav from './components/nav';
+import pop from './components/pop';
 
-const pop = () => {
-  const popup = document.createElement('div');
-  popup.id = 'pop';
-  popup.classList.add('show');
-}
 
 const btnPop = () => {
   const btn = document.createElement('button');
@@ -19,9 +15,9 @@ const btnPop = () => {
 }
 
 const startApp = () => {
+  pop();
   nav();
   btnPop();
-  pop();
 };
 
 startApp();
