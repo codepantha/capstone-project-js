@@ -20,8 +20,8 @@ const btnPop = () => {
 
 const startApp = () => {
   nav();
-  // btnPop();
-  // pop();
+  btnPop();
+  pop();
 };
 
 startApp();
