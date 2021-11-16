@@ -1,13 +1,11 @@
 import './style.css';
 import nav from './components/nav';
 
-
 // const pop = () => {
 //   const popup = document.createElement('div');
 //   popup.id = 'pop';
 //   popup.classList.add('show');
 // }
-
 
 // const btnPop = () => {
 //   const btn = document.createElement('button');
@@ -24,6 +22,6 @@ const startApp = () => {
   nav();
   // btnPop();
   // pop();
-}
+};
 
 startApp();
