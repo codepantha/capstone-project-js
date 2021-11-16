@@ -46,6 +46,38 @@ li {
   padding-bottom: 10px;
 }
 
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 1;
+  /* display: none; */
+}
+
+.btn {
+  background-color: #CCAB6F;
+  color: #662F18;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  background-color: #7D5535;
+  color: #E7E3AF;
+  transition: ease-in-out 0.3s;
+}
+
 .link:hover {
   background-color: #761919;
   color: #E7E3AF;
