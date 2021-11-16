@@ -72,19 +72,23 @@ li {
 
 
 .btn {
-  background-color: #ccab6f;
-  color: #662f18;
+  background-color: #e7e3af;
+  color: #97593e;
   font-size: 20px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-  border: none;
+  border: 1px solid #97593e2c;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
+  box-shadow: 5px 4px 15px 0px #0000007c;
+
+  /* This button is aligned temporarily to the center */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* -------------------------------------------------- */
 }
 
 .btn:hover {
