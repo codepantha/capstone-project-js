@@ -1,4 +1,4 @@
-  /* 
+/*
     #E7E3AF
     #CCAB6F
     #7D5535
@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-  background-color: #E7E3AF;
+  background-color: #e7e3af;
   height: 80px;
   margin: 0;
 }
@@ -30,10 +30,9 @@ li {
   padding-top: 16px;
 }
 
-
 .link {
   text-decoration: none;
-  color: #662F18;
+  color: #662f18;
   font-size: 25px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
@@ -54,12 +53,13 @@ li {
   height: 100%;
   background-color: rgba(0, 0, 0, 1);
   z-index: 1;
+
   /* display: none; */
 }
 
 .btn {
-  background-color: #CCAB6F;
-  color: #662F18;
+  background-color: #ccab6f;
+  color: #662f18;
   font-size: 20px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
@@ -73,14 +73,14 @@ li {
 }
 
 .btn:hover {
-  background-color: #7D5535;
-  color: #E7E3AF;
+  background-color: #7d5535;
+  color: #e7e3af;
   transition: ease-in-out 0.3s;
 }
 
 .link:hover {
   background-color: #761919;
-  color: #E7E3AF;
+  color: #e7e3af;
   padding: 3px 7px;
   border-radius: 3px;
   transition: ease-in-out 0.8s;
