@@ -56,36 +56,96 @@ li {
 }
 
 .modal-container {
-  width: 100%;
-  height: 91vh;
-  background: rgb(118,25,25);
-  background: linear-gradient(360deg, rgba(118, 25, 25, 0.924) 0%, rgb(128, 80, 41)100%);
-  z-index: 1;
   opacity: 0;
   pointer-events: none;
 }
 
 .show {
+  width: 100%;
+  height: 93vh;
+  background: rgb(118,25,25);
+  background: linear-gradient(360deg, rgba(118, 25, 25, 0.924) 0%, rgb(128, 80, 41)100%);
+  z-index: 1;
   opacity: 1;
   pointer-events: auto;
+  transition: ease-in-out 0.5s;
 }
 
 .modal {
   background-color: #e7e3af;
   width: 70%;
   margin: auto;
-  padding: 30px 50px;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 8px;
   min-height: 600px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
 }
 
 .modal-close {
-  text-align: left;
+  text-align: center;
   cursor: pointer;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.btnClose {
+  background-color: #662F18;
+  color: #e7e3af;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #97593e2c;
+  padding: 10px 20px;
+  box-shadow: 5px 5px 8px 1px #00000091;
+}
+
+.modal-title,
+.modal-comments,
+.modal-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.modal-comments {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.modal-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.modal-img {
+  width: 360px;
+  height: auto;
+}
+
+.modal-content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.comments-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+  border: 10px solid #000000;
+  border-radius: 10px;
 }
 
 .btn {
@@ -106,6 +166,22 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   /* -------------------------------------------------- */
+}
+
+
+
+.form-container {
+  padding: 20px;
+}
+
+#name,
+#review {
+  width: 80%;
+  height: 20px;
+  border: 1px solid #97593e2c;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 5px 4px 15px 0px #0000007c;
 }
 
 .btn:hover {
