@@ -109,13 +109,6 @@ main {
   height: 130px;
 }
 
-.grid-container {
-  /* display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 50px; */
-  display: flex;
-}
-
 .cards {
   width: 90%;
   margin: 100px auto;
@@ -139,11 +132,11 @@ main {
   font-size: 18px;
 }
 
-ion-icon {
+.icon {
   font-size: 18px;
 }
 
-ion-icon.comment {
+.icon.comment {
   color: #fff;
 }
 
