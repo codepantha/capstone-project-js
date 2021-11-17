@@ -1,5 +1,5 @@
 import defaultIMG from '../assets/images/hp-side-img3.png';
-import { getData, postData } from './handShake';
+import {getCharacter} from './handShake';
 
 const pop = () => {
   const body = document.body;
@@ -14,6 +14,27 @@ const pop = () => {
   const img = document.createElement('img');
   const headComments = document.createElement('h2');
   const comments = document.createElement('p');
+  const response = getCharacter();
+
+  response
+    .then(res => {
+      const Name = res[0].name;
+      const Actor = res[0].actor;
+      const House = res[0].house;
+      const Species = res[0].species;
+      const Image = res[0].image;
+
+      console.log(Name);
+      console.log(Actor);
+      console.log(House);
+      console.log(Species);
+      console.log(Image);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  
+  // h1.innerHTML = objName;
 
   container.classList.add('modal-container');
   container.id = 'modal-container';
@@ -21,10 +42,7 @@ const pop = () => {
   modal.classList.add('modal');
   modal.id = 'modal';
 
-  h1.classList.add('modal-title');
-  h1.innerText = 'Title from API';
-
-  p.innerText = 'This content should display data from Harry Potter API';
+  // p.innerText = info.description;
   p.classList.add('modal-content');
 
   img.src = defaultIMG;
@@ -55,6 +73,7 @@ const pop = () => {
   document.body.appendChild(btn);
   body.appendChild(container);
   container.appendChild(modal);
+  // modal.appendChild();
   modal.appendChild(h1);
   modal.appendChild(img);
   modal.appendChild(p);
@@ -95,8 +114,9 @@ const popup = () => {
   closed.addEventListener('click', () => {
     modalContainer.classList.remove('show');
   });
-
+  
   modalContainer.appendChild(closed);
+  
 }
 
-export {pop, popup};
+export { pop, popup };
