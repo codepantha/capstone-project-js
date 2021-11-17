@@ -68,10 +68,8 @@ const pop = () => {
   formContainer.innerHTML = `
     <form id="form" action="">
       <input type="text" id="name" placeholder="Name" required>
-      <textarea id="review" name="review" rows="4" cols="50">
-        Add your comment here...
-      </textarea>
-      <button type="submit" id="submit">Submit</button> 
+      <textarea id="review" name="review" placeholder="Add your comment..." rows="5" cols="50" required></textarea>
+      <button type="submit" id="submit">Comment</button> 
     </form>
   `;
   formContainer.classList.add('form-container');

@@ -101,6 +101,8 @@ li {
   border: 1px solid #97593e2c;
   padding: 10px 20px;
   box-shadow: 5px 5px 8px 1px #00000091;
+  position: sticky;
+  bottom: 0;
 }
 
 .modal-title,
@@ -144,7 +146,6 @@ li {
   margin-right: auto;
   width: 80%;
   text-align: center;
-  border: 10px solid #000000;
   border-radius: 10px;
 }
 
@@ -168,20 +169,38 @@ li {
   /* -------------------------------------------------- */
 }
 
-
-
 .form-container {
+  width: 80%;
+  margin: auto;
   padding: 20px;
+}
+
+#submit {
+  background-color: #7d5535;
+  color: #e7e3af;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #7d5535;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 4px 15px 0px #0000007c;
 }
 
 #name,
 #review {
-  width: 80%;
-  height: 20px;
-  border: 1px solid #97593e2c;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
   border-radius: 5px;
-  margin: auto;
-  box-shadow: 5px 4px 15px 0px #0000007c;
+  border: 3px solid #7d5535;
+}
+
+#submit:hover {
+  background-color: #e7e3af;
+  color: #7d5535;
+  transition: ease-in-out 0.5s;
+  box-shadow: none;
 }
 
 .btn:hover {
