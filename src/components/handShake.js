@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const app_id = 'abc234';
+const app_id = '1gPBmu94RP09f4VoDws0';
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const harryAPI = 'http://hp-api.herokuapp.com/api';
 
@@ -12,7 +12,7 @@ const getCharacter = async () => {
 }
 
 const getComments = async () => {
-  const response = await axios.get(`${url}/apps/${app_id}/comments/`);
+  const response = await axios.get(`${url}/apps/${app_id}/comments`);
   const data = await response.data;
   console.log(response);
   return data;
