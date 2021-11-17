@@ -9,6 +9,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 *,
@@ -96,9 +97,67 @@ li {
   transition: ease-in-out 0.8s;
 }
 
+main {
+  width: 100%;
+}
+
+.grid-container {
+  /* display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 50px; */
+  display: flex;
+}
+
+.cards {
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.card {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.character-name {
+  flex: 1;
+  align-self: center;
+  text-align: start;
+}
+
+.character-img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.likes-container {
+  text-align: center;
+}
+
+.comment-btn {
+  margin: 10px 0;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   background: #662f18;
-  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
   text-align: center;
   color: #fff;
 }
