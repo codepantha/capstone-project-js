@@ -1,4 +1,5 @@
 import defaultIMG from '../assets/images/hp-side-img3.png';
+import { getData, postData } from './handShake';
 
 const pop = () => {
   const body = document.body;
@@ -78,6 +79,7 @@ const pop = () => {
 const popup = () => {
   const open = document.getElementById('open');
   const modalContainer = document.getElementById('modal-container');
+  const closed = document.createElement('div');
   const close = document.getElementById('close-btn');
 
   open.addEventListener('click', () => {
@@ -87,6 +89,14 @@ const popup = () => {
   close.addEventListener('click', () => {
     modalContainer.classList.remove('show');
   });
+
+  closed.classList.add('close-x');
+  closed.textContent = 'X';
+  closed.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+  });
+
+  modalContainer.appendChild(closed);
 }
 
 export {pop, popup};

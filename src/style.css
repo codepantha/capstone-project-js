@@ -103,6 +103,18 @@ li {
   box-shadow: 5px 5px 8px 1px #00000091;
   position: sticky;
   bottom: 0;
+  width: 100%;
+  pointer-events: default;
+}
+
+.close-x {
+  color: #662F18;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: 160px;
+  left: 720px;
 }
 
 .modal-title,
@@ -199,8 +211,13 @@ li {
 #submit:hover {
   background-color: #e7e3af;
   color: #7d5535;
-  transition: ease-in-out 0.5s;
+  transition: ease-in-out 1.5s;
   box-shadow: none;
+}
+
+.btnClose:hover {
+  background-color: #7d5535;
+  color: #e7e3af;
 }
 
 .btn:hover {
