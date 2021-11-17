@@ -1,7 +1,11 @@
 import '../style.css';
+import sideImage from "../assets/images/hp-side-img.png";
 
 const card = (characters) => {
   const cardsContainer = document.querySelector('.cards');
+  const topImage = document.createElement('img');
+  topImage.classList = "side-img";
+  topImage.src = sideImage;
 
   characters.forEach((character, index) => {
     cardsContainer.innerHTML += `
@@ -19,6 +23,8 @@ const card = (characters) => {
         </button>
       </div>`;
   });
+
+  document.body.appendChild(topImage);
   
 };
 

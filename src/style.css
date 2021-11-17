@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  background: #ececec url("../src/assets/images/hp-bg.png");
 }
 
 *,
@@ -101,6 +102,13 @@ main {
   width: 100%;
 }
 
+.side-img {
+  position: absolute;
+  top: 23%;
+  left: 2%;
+  height: 130px;
+}
+
 .grid-container {
   /* display: grid;
   grid-template-columns: auto auto auto;
@@ -126,6 +134,9 @@ main {
   flex: 1;
   align-self: center;
   text-align: start;
+  font-weight: 700;
+  color: #6dd2ff;
+  font-size: 18px;
 }
 
 ion-icon {
@@ -147,6 +158,8 @@ ion-icon.comment {
 
 .likes-container {
   text-align: center;
+  color: #6dd2ff;
+  font-weight: 700;
 }
 
 .comment-btn {
