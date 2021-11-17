@@ -2,24 +2,24 @@ import '../style.css';
 
 const card = (characters) => {
   const cardsContainer = document.querySelector('.cards');
-  // cardContainer.classList.add("card", "grid-container");
 
-  characters.forEach((character) => {
+  characters.forEach((character, index) => {
     cardsContainer.innerHTML += `
       <div class="card">
-        <img class="character-img" alt=${character.name} src=${character.image} width=200 height=200>
+        <img class="character-img" alt=${character.name} src=${character.image} height=200 data-id=${index}>
         <div class="name-and-like-container flex-row">
           <span class="character-name">${character.name}</span>
           <div class="likes-container">
-            <ion-icon name="heart"></ion-icon><br>
+            <ion-icon class="like" name="heart-outline"></ion-icon><br>
             <span class="likes">10 likes</span>
           </div>
         </div>
-        <button type="button" class="comment-btn">Comments  
-          <ion-icon name="chatbubble"></ion-icon>
+        <button type="button" id=comment-btn${index} class="comment-btn" data-id=${index}> 
+          <ion-icon class="comment" name="chatbubble"></ion-icon>
         </button>
       </div>`;
   });
+  
 };
 
 export default card;

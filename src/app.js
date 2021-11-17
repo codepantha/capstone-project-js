@@ -10,7 +10,6 @@ const displayCharacterCards = async () => {
   const data = await result.json();
   const characters = await data.slice(0, pageLimit);
   card(characters);
-  // console.log(characters)
 };
 
 const startApp = () => {
