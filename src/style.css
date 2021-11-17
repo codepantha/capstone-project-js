@@ -65,7 +65,6 @@ li {
   height: 93vh;
   background: rgb(118,25,25);
   background: linear-gradient(360deg, rgba(118, 25, 25, 0.924) 0%, rgb(128, 80, 41)100%);
-  z-index: 1;
   opacity: 1;
   pointer-events: auto;
   transition: ease-in-out 0.5s;
@@ -108,13 +107,14 @@ li {
 }
 
 .close-x {
-  color: #662F18;
-  font-size: 30px;
+  color: #e7e3af;
+  font-size: 40px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-  position: absolute;
-  top: 160px;
-  left: 720px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 50px;
+  z-index: 1;
 }
 
 #modal-title,

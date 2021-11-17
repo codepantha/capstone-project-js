@@ -1,5 +1,5 @@
 import defaultIMG from '../assets/images/hp-side-img3.png';
-import {getCharacter} from './handShake';
+import {getCharacter, getComments} from './handShake';
 
 const pop = () => {
   const body = document.body;
@@ -19,6 +19,7 @@ const pop = () => {
   const headComments = document.createElement('h2');
   const comments = document.createElement('p');
   const response = getCharacter();
+  const commentsResponse = getComments();
   
   
   response
@@ -59,6 +60,14 @@ const pop = () => {
 
   descriptionContainer.classList.add('description-container');
 
+///////////////////////////////////////////////////////////////////////////////
+
+  commentsResponse
+    .then(res => {
+      comments.innerHTML = res[0].comment;
+      comments.id = 'modal-content';
+    })
+
   commentsContainer.classList.add('comments-container');
   commentsContainer.id = 'comments-container';
 
@@ -71,6 +80,8 @@ const pop = () => {
   comments.classList.add('comments');
   comments.id = 'comments';
 
+///////////////////////////////////////////////////////////////////////////////
+
   button.innerText = 'Close';
   button.id = 'close-btn';
   button.classList.add('modal-close');
@@ -79,6 +90,8 @@ const pop = () => {
   btn.innerHTML = 'COMMENTS';
   btn.id = 'open';
   btn.classList.add('btn');
+
+///////////////////////////////////////////////////////////////////////////////
 
   document.body.appendChild(btn);
   body.appendChild(container);
