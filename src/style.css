@@ -117,13 +117,13 @@ li {
   left: 720px;
 }
 
-.modal-title,
+#modal-title,
 .modal-comments,
 .modal-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 80%;
   text-align: center;
 }
 
@@ -132,24 +132,47 @@ li {
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.modal-title {
+
+#modal-title {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.modal-img {
-  width: 360px;
-  height: auto;
+#modal-actor {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
-.modal-content {
+#modal-house, 
+#modal-species {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal-img {
+  width: 240px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px 1px #00000091;
+}
+
+#modal-content {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.description-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .comments-container {
