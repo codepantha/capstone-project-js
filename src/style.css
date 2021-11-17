@@ -175,3 +175,15 @@ main {
 .footer-link:visited {
   color: rgb(194, 189, 189);
 }
+
+@media screen and (max-width: 900px) {
+  .cards {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .cards {
+    grid-template-columns: auto;
+  }
+}
