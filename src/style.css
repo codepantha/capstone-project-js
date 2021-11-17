@@ -110,9 +110,10 @@ main {
 
 .cards {
   width: 90%;
-  margin: 10px auto;
+  margin: 100px auto;
   text-align: center;
   display: grid;
+  grid-row-gap: 55px;
   grid-template-columns: auto auto auto;
 }
 
