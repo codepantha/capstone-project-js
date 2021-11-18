@@ -3,6 +3,7 @@
 import '../style.css';
 import sideImage from '../assets/images/hp-side-img.png';
 import { like } from '../apiCalls';
+import itemCounter from '../itemCounter';
 
 const card = (characters, likes = null) => {
   const cardsContainer = document.querySelector('.cards');
@@ -11,6 +12,8 @@ const card = (characters, likes = null) => {
   topImage.src = sideImage;
 
   cardsContainer.innerHTML = '';
+
+  itemCounter(characters);
 
   characters.forEach((character, index) => {
     const characterLikes = likes.filter((like) => Number(like.item_id) === index)[0];

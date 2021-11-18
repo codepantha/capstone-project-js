@@ -175,6 +175,14 @@ main {
   flex-direction: column;
 }
 
+.items-count {
+  text-align: end;
+  font-size: 24px;
+  margin-right: 20px;
+  font-weight: 600;
+  color: #474d73;
+}
+
 .footer {
   background: #662f18;
   position: fixed;
