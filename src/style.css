@@ -204,6 +204,13 @@ li {
   /* -------------------------------------------------- */
 }
 
+.comments { 
+  background-color: #e7e3af; 
+  color: #97593e;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .form-container {
   width: 80%;
   margin: auto;

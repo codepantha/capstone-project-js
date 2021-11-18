@@ -19,8 +19,28 @@ const pop = () => {
   const headComments = document.createElement('h2');
   const comments = document.createElement('p');
   const response = getCharacter();
-  const commentsResponse = getComments();
-  
+  const comment = getComments();
+
+
+  comment
+    .then(res => {
+      const commentElement = document.createElement('p');
+      commentElement.innerHTML = `
+        <p>
+          ${res[0].creation_date}:
+          ${res[0].username}
+          <i>said:</i>
+          ${res[0].comment}
+        </p>
+      `;
+      if (res % 2 === 0) {
+        commentsElement.classList.add('bg-comment');
+      }
+      commentsContainer.appendChild(commentElement);
+    })
+    .catch(err => {
+      console.log(err);
+    });
   
   response
   .then(res => {
@@ -60,13 +80,7 @@ const pop = () => {
 
   descriptionContainer.classList.add('description-container');
 
-///////////////////////////////////////////////////////////////////////////////
 
-  commentsResponse
-    .then(res => {
-      comments.innerHTML = res[0].comment;
-      comments.id = 'modal-content';
-    })
 
   commentsContainer.classList.add('comments-container');
   commentsContainer.id = 'comments-container';
@@ -76,7 +90,6 @@ const pop = () => {
   headComments.id = 'modal-comments';
   headComments.style.fontWeight = 'bold';
 
-  comments.innerText = 'This content should display data from COMMENTS API';
   comments.classList.add('comments');
   comments.id = 'comments';
 
