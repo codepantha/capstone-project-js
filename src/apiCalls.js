@@ -1,7 +1,9 @@
+/* eslint-disable import/no-cycle */
+
 import card from './components/card';
 import appId from './appId';
 
-const getCharactersAndLikes = async () => {
+export const getCharactersAndLikes = async () => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes`;
   const res = await fetch(url);
   const likes = await res.json();
@@ -13,4 +15,15 @@ const getCharactersAndLikes = async () => {
   card(characters, likes);
 };
 
-export default getCharactersAndLikes;
+export const like = async (characterId) => {
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes`;
+  await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: characterId,
+    }),
+  });
+};

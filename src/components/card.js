@@ -1,5 +1,8 @@
+/* eslint-disable import/no-cycle */
+
 import '../style.css';
 import sideImage from '../assets/images/hp-side-img.png';
+import { like } from '../apiCalls';
 
 const card = (characters, likes = null) => {
   const cardsContainer = document.querySelector('.cards');
@@ -32,6 +35,18 @@ const card = (characters, likes = null) => {
   });
 
   document.body.appendChild(topImage);
+
+  const likeButtons = document.querySelectorAll('.like');
+  likeButtons.forEach((likeButton) => {
+    likeButton.addEventListener('click', () => {
+      const likeSpan = likeButton.nextElementSibling.nextElementSibling;
+      let currentLikesCount = Number(likeSpan.innerHTML.split(' ')[0]);
+      currentLikesCount += 1;
+      like(likeButton.dataset.id);
+      likeSpan.innerText = '';
+      likeSpan.innerText = currentLikesCount;
+    });
+  });
 };
 
 export default card;
