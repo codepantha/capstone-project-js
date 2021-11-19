@@ -1,10 +1,10 @@
 <br />
 <p align="center">
 
-  <h3 align="center">Leaderboard</h3>
+  <h3 align="center">Capstone Project</h3>
 
   <p align="center">
-    A Leaderboard project with Webpack and JavaScript
+    This is a Capstone Project where we display Characters from a Harry Potter API. A user can create comments for each character using their name and a comment.
     <br />
     <a href="#"><strong>Explore the docs »</strong></a>
     <br />
@@ -44,7 +44,7 @@
 
 ## About The Project
 
-A Leaderboard project with webpack and JavaScript
+This is a Capstone Project where we display Characters from a Harry Potter API. A user can create comments for each character using their name and a comment.
 
 ### Built With
 
@@ -54,6 +54,12 @@ A Leaderboard project with webpack and JavaScript
 - [JS](https://www.javascript.com/)
 
 ## Authors
+👤 **Eze Promisie**
+
+- GitHub: [@Eze Promisie](https://github.com/codepantherr)
+- Twitter: [@Eze Promisie](https://twitter.com/codepantherr)
+- LinkedIn: [Eze Promisie](https://www.linkedin.com/in/promise-eze/)
+
 
 👤 **Carlos Flores**
 
@@ -72,10 +78,12 @@ A Leaderboard project with webpack and JavaScript
 
 ### Installation
 
+
 1. Clone the repo
    ```sh
-   git clone git@github.com:eroauditore/boardLead.git
+   git@github.com:codepantherr/capstone-project-js.git
    ```
+
 2. Install NPM packages
    ```sh
    npm install
@@ -87,11 +95,11 @@ A Leaderboard project with webpack and JavaScript
 
 ## Usage
 
-- Practice to setup a webpack project and make a Leaderboard with UI functionality.
+- Practice to setup a webpack project and make a Capstone Project with UI functionality.
 
 ## Roadmap
 
-See the [open issues](https://github.com/carlos-ssh/boardLead/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/codepantherr/capstone-project-js/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
