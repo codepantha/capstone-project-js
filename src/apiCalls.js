@@ -2,7 +2,7 @@
 
 import card from './components/card';
 import appId from './appId';
-import modal from './components/modal';
+import modal, { displayComments } from './components/modal';
 
 export const getCharactersAndLikes = async () => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes`;
@@ -40,4 +40,19 @@ export const getPopUpCharacterComments = async (characterId) => {
   const result = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments?item_id=${characterId}`);
   const data = await result.json();
   return data;
+};
+
+export const addNewComment = async (userDetails) => {
+  await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: userDetails.characterId,
+      username: userDetails.username,
+      comment: userDetails.comment,
+    }),
+  });
+  await displayComments(userDetails.characterId);
 };
