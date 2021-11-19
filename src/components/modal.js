@@ -1,16 +1,15 @@
-const modal = async (character) => {
-  console.log(character);
+import { getPopUpCharacterComments } from "../apiCalls";
+const modal = async (character, characterId) => {
   const popUpModal = document.createElement('div');
-  popUpModal.classList = 'modal';
-
-  popUpModal.innerHTML = `
+  popUpModal.classList = "modal";
+  popUpModal.innerHTML =
+  `
     <div class="modal-container">
       <button class='close-modal'>X</button>
       <div class="modal-img">
         <img src=${character.image} alt="modal-img">
         <h2>${character.name}</h2>
       </div>
-
       <div class="modal-info-container">
         <div class="modal-info">
           <p class="modal-info-text">
@@ -27,16 +26,21 @@ const modal = async (character) => {
           </p>
         </div>
       </div>
-
+      ${getPopUpCharacterComments(characterId).then(comments => {
+        const modalComments = document.querySelector('.modal-comments');
+        comments.forEach(comment => {
+          modalComments.innerHTML += `
+          <p class="modal-comment">${comment.creation_date} ${comment.username}: ${comment.comment}</p>
+          `
+        })
+      })
+      }
       <div class="modal-comments-container">
         <div class="modal-comment-title">
           <h3>Comments (2)</h3>
         </div>
         <div class="modal-comments">
-          <p class="modal-comment">03/11/2021 Mia: I love Harry Potter</p>
-          <p class="modal-comment">03/11/2021 Cleopatra: You're my favourite character ever</p>
         </div>
-
         <div class="add-comments">
           <h3>Add a comment</h3>
           <div 'comment-form-container'>
@@ -47,20 +51,14 @@ const modal = async (character) => {
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
   `;
-
   document.body.appendChild(popUpModal);
-
   const closeModal = () => {
     document.querySelector('.modal').remove();
-  };
-
+  }
   const closeModalButton = document.querySelector('.close-modal');
   closeModalButton.addEventListener('click', () => closeModal());
-};
-
+}
 export default modal;
