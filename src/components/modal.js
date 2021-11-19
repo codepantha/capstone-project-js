@@ -30,8 +30,8 @@ const modal = async (character, characterId) => {
       </div>
 
     ${getPopUpCharacterComments(characterId).then((comments) => {
-      const commentsCount = commentsCounter(comments);
-      document.getElementById('commentCount').innerText = commentsCount
+    const commentsCount = commentsCounter(comments);
+    document.getElementById('commentCount').innerText = commentsCount
       ? `Comments: ${commentsCount}`
       : `Comments: ${0}`;
     const modalComments = document.querySelector('.modal-comments');
