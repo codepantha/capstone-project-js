@@ -6,14 +6,16 @@
   <p align="center">
     This is a Capstone Project where we display Characters from a Harry Potter API. A user can create comments for each character using their name and a comment.
     <br />
-    <a href="#"><strong>Explore the docs »</strong></a>
+    <a href="#"><strong>Explore the docs 👇🏽</strong></a>
     <br />
     <br />
-    <a href="#">Live Demo</a>
+    <a href="#"> <strong>Video Demo </strong> </a>
     ·
-    <a href="https://github.com/carlos-ssh/boardLead/issues">Report Bug</a>
+    <a href="https://harrypotteractors.netlify.app/"><strong>Live Demo</strong></a>
     ·
-    <a href="https://github.com/carlos-ssh/boardLead/issues">Request Feature</a>
+    <a href="https://github.com/codepantherr/capstone-project-js/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/codepantherr/capstone-project-js/issues">Request Feature</a>
   </p>
 </p>
 
