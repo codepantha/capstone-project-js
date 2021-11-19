@@ -28,17 +28,18 @@ const modal = async (character, characterId) => {
         </div>
       </div>
       ${getPopUpCharacterComments(characterId).then((comments) => {
-    const modalComments = document.querySelector('.modal-comments');
-    comments.forEach((comment) => {
-      modalComments.innerHTML += `
+        document.getElementById('commentCount').innerText = comments.length ? "Comments: " + comments.length : "Comments: " + 0;
+        const modalComments = document.querySelector('.modal-comments');
+        comments.forEach((comment) => {
+        modalComments.innerHTML += `
           <p class="modal-comment">${comment.creation_date} ${comment.username}: ${comment.comment}</p>
           `;
-    });
+      });
   })
 }
       <div class="modal-comments-container">
         <div class="modal-comment-title">
-          <h3>Comments (2)</h3>
+          <h3 id="commentCount">Comments (2)</h3>
         </div>
         <div class="modal-comments">
         </div>
