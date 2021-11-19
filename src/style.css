@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background: #ececec url("../src/assets/images/hp-bg.png");
+  background: #959595 url("../src/assets/images/hp-bg.png");
 }
 
 *,
@@ -24,9 +24,12 @@ html {
 }
 
 nav {
-  background-color: #e7e3af;
+  background-color: transparent;
   height: 80px;
   margin: 0;
+  border: 1px solid aliceblue;
+  box-shadow: 10px 10px 30px aliceblue;
+  opacity: 0.9;
 }
 
 ul {
@@ -128,7 +131,7 @@ main {
   align-self: center;
   text-align: start;
   font-weight: 700;
-  color: #6dd2ff;
+  color: #fff;
   font-size: 18px;
 }
 
@@ -145,13 +148,21 @@ main {
   margin-bottom: 10px;
   border: 1px solid #1f1d36;
   border-radius: 25px;
-  box-shadow: 3px 6px 6px 3px #b2b1be;
+  box-shadow: 3px 6px 6px 3px #292748;
   cursor: pointer;
+}
+
+.character-img:hover {
+  box-shadow: 3px 6px 3px 3px #292748;
+}
+
+.character-img:active {
+  box-shadow: 1px 3px 6px 3px #292748;
 }
 
 .likes-container {
   text-align: center;
-  color: #6dd2ff;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -173,6 +184,7 @@ main {
 .flex-col {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .items-count {
@@ -180,7 +192,7 @@ main {
   font-size: 24px;
   margin-right: 20px;
   font-weight: 600;
-  color: #474d73;
+  color: #fff;
 }
 
 .footer {
@@ -205,6 +217,40 @@ main {
 .footer-link:hover,
 .footer-link:visited {
   color: rgb(194, 189, 189);
+}
+
+.modal {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 10%;
+  background: red;
+}
+
+.modal-img {
+  width: 100%;
+}
+
+.modal-container {
+  text-align: center;
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: white;
+  border: 5px solid #292748;
+}
+
+.comment-input {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.submit-btn {
+  margin-bottom: 30px;
+  width: 10%;
+  padding: 10px;
 }
 
 @media screen and (max-width: 900px) {

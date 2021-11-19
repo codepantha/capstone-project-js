@@ -2,7 +2,7 @@
 
 import '../style.css';
 import sideImage from '../assets/images/hp-side-img.png';
-import { like } from '../apiCalls';
+import { getPopUpCharacter, like } from '../apiCalls';
 import itemCounter from '../itemCounter';
 
 const card = (characters, likes = null) => {
@@ -48,6 +48,14 @@ const card = (characters, likes = null) => {
       like(likeButton.dataset.id);
       likeSpan.innerText = '';
       likeSpan.innerText = currentLikesCount;
+    });
+  });
+
+  const commentButtons = document.querySelectorAll('.comment-btn');
+  commentButtons.forEach((commentBtn) => {
+    commentBtn.addEventListener('click', () => {
+      const characterId = commentBtn.dataset.id;
+      getPopUpCharacter(characterId);
     });
   });
 };
