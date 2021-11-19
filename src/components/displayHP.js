@@ -1,4 +1,4 @@
-import {getCharacter} from './handShake';
+import { getCharacter } from './handShake';
 
 
 const displayHP = () => {

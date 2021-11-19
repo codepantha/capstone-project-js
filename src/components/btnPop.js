@@ -11,7 +11,7 @@ const btnPop = () => {
 
   document.body.appendChild(btn);
 
-  // const open = document.getElementById('open');
+  const open = document.getElementById('open');
   const modalContainer = document.getElementById('modal-container');
   const closed = document.createElement('div');
   const close = document.getElementById('close-btn');
@@ -19,22 +19,19 @@ const btnPop = () => {
 
   btn.addEventListener('click', () => {
     modalContainer.classList.add('show');
-    displayHP();
-    displayComments('Harry');
+
   });
 
-  
+  close.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+  });
 
-  // close.addEventListener('click', () => {
-  //   modalContainer.classList.remove('show');
-  // });
-
-  // closed.classList.add('close-x');
-  // closed.textContent = 'X';
-  // closed.addEventListener('click', () => {
-  //   modalContainer.classList.remove('show');
-  // });
-  // modalContainer.appendChild(closed);
+  closed.classList.add('close-x');
+  closed.textContent = 'X';
+  closed.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+  });
+  modalContainer.appendChild(closed);
 };
 
 export default btnPop;

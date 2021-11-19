@@ -1,14 +1,16 @@
 import { getComments } from './handShake';
+import pop from './pop';
 
 const displayComments = (id) => {
   const comment = getComments(id);
   const commentsContainer = document.createElement('div');
   const headComments = document.createElement('h2');
   const comments = document.createElement('p');
-
+  const popFunction = pop();
+  
   commentsContainer.classList.add('comments-container');
   commentsContainer.id = 'comments-container';
-  headComments.innerText = 'Comments:';
+  headComments.innerText = `Comments:`;
   headComments.classList.add('modal-comments');
   headComments.id = 'modal-comments';
   headComments.style.fontWeight = 'bold';
