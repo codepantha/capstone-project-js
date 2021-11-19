@@ -1,11 +1,12 @@
 import './style.css';
 import nav from './components/nav';
-import {pop, popup} from './components/pop';
+import pop from './components/pop';
+import btnPop from './components/btnPop';
 
 const startApp = () => {
-  pop();
-  popup();
   nav();
+  pop();
+  btnPop();
 };
 
 startApp();
