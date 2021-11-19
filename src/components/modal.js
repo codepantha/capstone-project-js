@@ -1,9 +1,10 @@
-import { getPopUpCharacterComments } from "../apiCalls";
+/* eslint-disable import/no-cycle */
+import { getPopUpCharacterComments } from '../apiCalls';
+
 const modal = async (character, characterId) => {
   const popUpModal = document.createElement('div');
-  popUpModal.classList = "modal";
-  popUpModal.innerHTML =
-  `
+  popUpModal.classList = 'modal';
+  popUpModal.innerHTML = `
     <div class="modal-container">
       <button class='close-modal'>X</button>
       <div class="modal-img">
@@ -26,15 +27,15 @@ const modal = async (character, characterId) => {
           </p>
         </div>
       </div>
-      ${getPopUpCharacterComments(characterId).then(comments => {
-        const modalComments = document.querySelector('.modal-comments');
-        comments.forEach(comment => {
-          modalComments.innerHTML += `
+      ${getPopUpCharacterComments(characterId).then((comments) => {
+    const modalComments = document.querySelector('.modal-comments');
+    comments.forEach((comment) => {
+      modalComments.innerHTML += `
           <p class="modal-comment">${comment.creation_date} ${comment.username}: ${comment.comment}</p>
-          `
-        })
-      })
-      }
+          `;
+    });
+  })
+}
       <div class="modal-comments-container">
         <div class="modal-comment-title">
           <h3>Comments (2)</h3>
@@ -57,8 +58,8 @@ const modal = async (character, characterId) => {
   document.body.appendChild(popUpModal);
   const closeModal = () => {
     document.querySelector('.modal').remove();
-  }
+  };
   const closeModalButton = document.querySelector('.close-modal');
   closeModalButton.addEventListener('click', () => closeModal());
-}
+};
 export default modal;
