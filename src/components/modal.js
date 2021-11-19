@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
 import { getPopUpCharacterComments } from '../apiCalls';
+import commentsCounter from './commentsCounter';
 
 const modal = async (character, characterId) => {
   const popUpModal = document.createElement('div');
@@ -29,8 +30,9 @@ const modal = async (character, characterId) => {
       </div>
 
     ${getPopUpCharacterComments(characterId).then((comments) => {
-    document.getElementById('commentCount').innerText = comments.length
-      ? `Comments: ${comments.length}`
+      const commentsCount = commentsCounter(comments);
+      document.getElementById('commentCount').innerText = commentsCount
+      ? `Comments: ${commentsCount}`
       : `Comments: ${0}`;
     const modalComments = document.querySelector('.modal-comments');
     comments.forEach((comment) => {
