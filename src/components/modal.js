@@ -1,6 +1,22 @@
 /* eslint-disable import/no-cycle */
-import { getPopUpCharacterComments } from '../apiCalls';
-import commentsCounter from './commentsCounter';
+import { addNewComment, getPopUpCharacterComments } from '../apiCalls';
+import commentsCounter from '../commentsCounter';
+
+export const displayComments = async (characterId) => {
+  await getPopUpCharacterComments(characterId).then((comments) => {
+    const commentsCount = commentsCounter(comments);
+    document.getElementById('commentCount').innerText = commentsCount
+      ? `Comments: ${commentsCount}`
+      : `Comments: ${0}`;
+    const modalComments = document.querySelector('.modal-comments');
+    modalComments.innerHTML = '';
+    comments.forEach((comment) => {
+      modalComments.innerHTML += `
+          <p class="modal-comment">${comment.creation_date} ${comment.username}: ${comment.comment}</p>
+          `;
+    });
+  });
+};
 
 const modal = async (character, characterId) => {
   const popUpModal = document.createElement('div');
@@ -29,18 +45,8 @@ const modal = async (character, characterId) => {
         </div>
       </div>
 
-    ${getPopUpCharacterComments(characterId).then((comments) => {
-    const commentsCount = commentsCounter(comments);
-    document.getElementById('commentCount').innerText = commentsCount
-      ? `Comments: ${commentsCount}`
-      : `Comments: ${0}`;
-    const modalComments = document.querySelector('.modal-comments');
-    comments.forEach((comment) => {
-      modalComments.innerHTML += `
-          <p class="modal-comment">${comment.creation_date} ${comment.username}: ${comment.comment}</p>
-          `;
-    });
-  })}
+      ${displayComments(characterId)}
+    
       <div class="modal-comments-container">
         <div class="modal-comment-title">
           <h3 id="commentCount">Comments (2)</h3>
@@ -60,10 +66,27 @@ const modal = async (character, characterId) => {
       </div>
     </div>
   `;
+
   document.body.appendChild(popUpModal);
   const closeModal = () => {
     document.querySelector('.modal').remove();
   };
+
+  const submitBtn = document.querySelector('.submit-btn');
+
+  submitBtn.addEventListener('click', () => {
+    const usernameInput = document.querySelector('input[name="name"]');
+    const commentInput = document.querySelector('input[name="comment"]');
+
+    const username = usernameInput.value;
+    const comment = commentInput.value;
+
+    addNewComment({ characterId, username, comment });
+
+    usernameInput.value = '';
+    commentInput.value = '';
+  });
+
   const closeModalButton = document.querySelector('.close-modal');
   closeModalButton.addEventListener('click', () => closeModal());
 };
