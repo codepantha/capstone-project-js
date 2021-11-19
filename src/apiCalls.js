@@ -33,6 +33,11 @@ export const getPopUpCharacter = async (characterId) => {
   const result = await fetch('http://hp-api.herokuapp.com/api/characters');
   const data = await result.json();
   const characters = await data.slice(0, 10);
+  modal(characters[characterId], characterId);
+};
 
-  modal(characters[characterId]);
+export const getPopUpCharacterComments = async (characterId) => {
+  const result = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments?item_id=${characterId}`);
+  const data = await result.json();
+  return data;
 };
