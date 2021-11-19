@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background: #ececec url("../src/assets/images/hp-bg.png");
+  background: #959595 url("../src/assets/images/hp-bg.png");
 }
 
 *,
@@ -128,7 +128,7 @@ main {
   align-self: center;
   text-align: start;
   font-weight: 700;
-  color: #6dd2ff;
+  color: #fff;
   font-size: 18px;
 }
 
@@ -145,13 +145,13 @@ main {
   margin-bottom: 10px;
   border: 1px solid #1f1d36;
   border-radius: 25px;
-  box-shadow: 3px 6px 6px 3px #b2b1be;
+  box-shadow: 3px 6px 6px 3px #292748;
   cursor: pointer;
 }
 
 .likes-container {
   text-align: center;
-  color: #6dd2ff;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -180,7 +180,7 @@ main {
   font-size: 24px;
   margin-right: 20px;
   font-weight: 600;
-  color: #474d73;
+  color: #fff;
 }
 
 .footer {
