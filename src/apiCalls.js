@@ -9,7 +9,7 @@ export const getCharactersAndLikes = async () => {
   const res = await fetch(url);
   const likes = await res.json();
 
-  const result = await fetch('http://hp-api.herokuapp.com/api/characters');
+  const result = await fetch('https://hp-api.herokuapp.com/api/characters');
   const data = await result.json();
   const characters = await data.slice(0, 10);
 
@@ -30,7 +30,7 @@ export const like = async (characterId) => {
 };
 
 export const getPopUpCharacter = async (characterId) => {
-  const result = await fetch('http://hp-api.herokuapp.com/api/characters');
+  const result = await fetch('https://hp-api.herokuapp.com/api/characters');
   const data = await result.json();
   const characters = await data.slice(0, 10);
   modal(characters[characterId], characterId);
