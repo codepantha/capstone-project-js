@@ -35,4 +35,4 @@ export const getPopUpCharacter = async (characterId) => {
   const characters = await data.slice(0, 10);
 
   modal(characters[characterId]);
-}
+};

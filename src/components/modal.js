@@ -1,10 +1,9 @@
 const modal = async (character) => {
-  console.log(character)
+  console.log(character);
   const popUpModal = document.createElement('div');
-  popUpModal.classList = "modal";
+  popUpModal.classList = 'modal';
 
-  popUpModal.innerHTML = 
-  `
+  popUpModal.innerHTML = `
     <div class="modal-container">
       <button class='close-modal'>X</button>
       <div class="modal-img">
@@ -58,13 +57,10 @@ const modal = async (character) => {
 
   const closeModal = () => {
     document.querySelector('.modal').remove();
-  }
-  
+  };
+
   const closeModalButton = document.querySelector('.close-modal');
   closeModalButton.addEventListener('click', () => closeModal());
-
-}
-
-
+};
 
 export default modal;
