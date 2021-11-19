@@ -24,9 +24,12 @@ html {
 }
 
 nav {
-  background-color: #e7e3af;
+  background-color: transparent;
   height: 80px;
   margin: 0;
+  border: 1px solid aliceblue;
+  box-shadow: 10px 10px 30px aliceblue;
+  opacity: 0.9;
 }
 
 ul {
@@ -147,6 +150,14 @@ main {
   border-radius: 25px;
   box-shadow: 3px 6px 6px 3px #292748;
   cursor: pointer;
+}
+
+.character-img:hover {
+  box-shadow: 3px 6px 3px 3px #292748;
+}
+
+.character-img:active {
+  box-shadow: 1px 3px 6px 3px #292748;
 }
 
 .likes-container {
