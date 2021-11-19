@@ -2,8 +2,9 @@
 
 import '../style.css';
 import sideImage from '../assets/images/hp-side-img.png';
-import { like } from '../apiCalls';
+import { getPopUpCharacter, like } from '../apiCalls';
 import itemCounter from '../itemCounter';
+import modal from './modal';
 
 const card = (characters, likes = null) => {
   const cardsContainer = document.querySelector('.cards');
@@ -50,6 +51,15 @@ const card = (characters, likes = null) => {
       likeSpan.innerText = currentLikesCount;
     });
   });
+
+  const commentButtons = document.querySelectorAll('.comment-btn');
+  commentButtons.forEach(commentBtn => {
+    commentBtn.addEventListener('click', () => {
+      const characterId = commentBtn.dataset.id;
+      getPopUpCharacter(characterId);
+    })
+
+  })
 };
 
 export default card;

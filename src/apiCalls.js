@@ -2,6 +2,7 @@
 
 import card from './components/card';
 import appId from './appId';
+import modal from './components/modal';
 
 export const getCharactersAndLikes = async () => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes`;
@@ -27,3 +28,11 @@ export const like = async (characterId) => {
     }),
   });
 };
+
+export const getPopUpCharacter = async (characterId) => {
+  const result = await fetch('http://hp-api.herokuapp.com/api/characters');
+  const data = await result.json();
+  const characters = await data.slice(0, 10);
+
+  modal(characters[characterId]);
+}

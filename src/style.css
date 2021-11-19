@@ -184,6 +184,7 @@ main {
 .flex-col {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .items-count {
@@ -216,6 +217,40 @@ main {
 .footer-link:hover,
 .footer-link:visited {
   color: rgb(194, 189, 189);
+}
+
+.modal {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 10%;
+  background: red;
+}
+
+.modal-img {
+  width: 100%;
+}
+
+.modal-container {
+  text-align: center;
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: white;
+  border: 5px solid #292748;
+}
+
+.comment-input {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.submit-btn {
+  margin-bottom: 30px;
+  width: 10%;
+  padding: 10px;
 }
 
 @media screen and (max-width: 900px) {
